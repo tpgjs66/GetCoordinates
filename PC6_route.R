@@ -20,7 +20,7 @@ ppcs <- rgdal::readOGR("D:/Projects/github/GetCoordinates/data/ppcs_single.shp",
 # pc6sf$PC4 <- substr(pc6sf$PC6,1,4)
 
 pc6sf <-   sf::read_sf("D:/Projects/github/GetCoordinates/data/pc6/PC6_BBG2012.shp",
-                           layer = "PC6_BBG2012", GDAL1_integer64_policy = TRUE)
+                           layer = "PC6_BBG2012")
 pc6sf$PC4<-substr(pc6sf$PC6,1,4)
  
 # pc6sp <- rgdal::readOGR("D:/mygithub/AlbatrossViewer/data/pc6/EindhovenMuni.shp",
@@ -99,6 +99,7 @@ hh$Lng <- coords[,1]
 hh$Lat <- coords[,2]
 hh$PC6 <- hhpc6
 
+write.csv(hh,"hh-coords.txt")
 
 ##########################################################################
 

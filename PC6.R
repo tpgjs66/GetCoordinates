@@ -1,5 +1,5 @@
 
-hh<-read.csv("D:/Projects/github/GetCoordinates/household-gen.txt",sep = ",")
+hh<-read.csv("D:/Projects/github/GetCoordinates/household_Helmond2-gen.txt",sep = ",")
 
 ppcs <-  rgdal::readOGR("D:/Projects/github/GetCoordinates/data/pc6/pc6.shp",
                         layer = "PC6", GDAL1_integer64_policy = TRUE)
